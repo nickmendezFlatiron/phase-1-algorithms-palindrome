@@ -7,7 +7,7 @@ function isPalindrome(word) {
   // console.log(letter)
     wordBackwords.push(letter)
   }
-  wordBackwords = wordBackwords.join("")
+  wordBackwords = wordBackwords.join("").toString()
   // console.log(wordBackwords)
 
   if(word === wordBackwords) {
@@ -27,6 +27,9 @@ function isPalindrome(word) {
   last, etc
   - I made the user input lowercase first and made it a string
   - i Iterated over each letter with charAt , using the length 
+  - I pushed every letter to an array and then joined the array elements to form a new string
+  - I tested whether the user input was eqaul to the backwards string and returned true if it was,
+  false if it wasn't
 */
 
 // You can run `node index.js` to view these console logs
