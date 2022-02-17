@@ -1,9 +1,24 @@
 function isPalindrome(word) {
-  // Write your algorithm here
-}
+  word = word.toLowerCase().toString()
+  let wordBackwords = []
+  //console.log(word)
+  for (let n = 0 , i = word.length ; n < i + 1  ; n++){
+    let letter = word.charAt(i - 1 - n)
+ //   console.log(letter)
+    wordBackwords.push(letter)
+  }
+  wordBackwords = wordBackwords.join("")
+  console.log(wordBackwords)
 
+  if(word === wordBackwords) {
+    return true
+  } else {return false}
+}
 /* 
-  Add your pseudocode here
+  The string value of the argument "word" you pass in isPalindrome must be 
+  equal to the value of the argument spelled backwards
+  Iterate through the string "word" backwords and test whether it is equal to the
+  value of word as it is provided in the input
 */
 
 /*
